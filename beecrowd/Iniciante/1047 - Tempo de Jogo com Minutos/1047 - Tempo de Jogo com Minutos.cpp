@@ -3,33 +3,20 @@
 
 using namespace std;
 
-//VARIAVEL GLOBAL
-double horaEmSegundos=0, minEmSegundos=0;
+double horaMinEmSegundos(double horas_func, double minutos_func){
+  double saidaSomaSegundos=0, minutosSegundos=0, horasSegundos=0;
 
-double horaInicialEmSegundos(double horaInicial_func){
-  horaEmSegundos=0;
-  horaEmSegundos = horaInicial_func*3600; //Horas -> Segundos = Horas * 3.600 = Horas em Segundos
-  return horaEmSegundos;
+  horasSegundos=horas_func*3600;
+  minutosSegundos=minutos_func*60;
+
+  saidaSomaSegundos=horasSegundos+minutosSegundos;
+
+  return saidaSomaSegundos;
 }
 
-double horaFinalEmSegundos(double horaFinal_func){
-  horaEmSegundos=0;
-  horaEmSegundos = horaFinal_func*3600; //Horas -> Segundos = Horas * 3.600 = Horas em Segundos
-  return horaEmSegundos;
-}
+void doubleParaChar(){
 
-double minInicialEmSegundos(double minInicial_func){
-  minEmSegundos=0;
-  minEmSegundos = minInicial_func*60;
-  return minEmSegundos;
 }
-
-double minFinalEmSegundos(double minFinal_func){
-  minEmSegundos=0;
-  minEmSegundos = minFinal_func*60;
-  return minEmSegundos;
-}
-
 
 int main(){
   cout << setprecision(3) << fixed;
@@ -39,22 +26,24 @@ int main(){
          horaFinal=0, minutoFinal=0,
          horaTotal=0, minutoTotal,
          minHorInicialSegundos=0,
-         minHorFinalSegundos=0;
+         minHorFinalSegundos=0,
+         difMinHor=0, voltaHoras=0;
 
   cin >> horaIncial >> minutoInicial >> horaFinal >> minutoFinal;
 
-  minHorInicialSegundos=horaInicialEmSegundos(horaIncial)+minInicialEmSegundos(minutoInicial);
-  minHorFinalSegundos=horaFinalEmSegundos()
+  minHorInicialSegundos = horaMinEmSegundos(horaIncial, minutoInicial);
+  minHorFinalSegundos = horaMinEmSegundos(horaFinal, minutoFinal);
 
-  //AMANHA, NÃO PRECISA DE UMA FUNCAO INICIAL E FINAL, APENAS FUNCAO
-  //OS VALORES SAO ARMAZENADOS NAS VARIAVEIS
+  cout << " " << minHorFinalSegundos;
 
 
-  cout << minHorSegundos;
+  /*if(){
 
-  if(horaInicial < horaFinal){
+    voltaHoras=difMinHor/3600;
+    cout << "asdasd" << voltaHoras;
+}*/
 
-  }
+
 
 
  /* if(horaIncial < horaFinal){
@@ -84,6 +73,9 @@ E faz o mesmo com horaFinal e minutoFinal
 se horaFinal > horaInicial
   faz a diferença entre os segundos, converte para horas, mantém a hora. E se-
 para os minutos em horas e transforma em minutos minutos.
+
+Separo a parte inteira da decimal
+-> Transformo em string(vetor de char) e separo
 
 e converto para horas e minutos de novo
 */
