@@ -65,7 +65,7 @@ int main(){
 
   //TOMADA DE DECISAO
   if(inicialEmSegundos<finalEmSegundos){
-    //DIFERENÃ‡A INICIAL E FINAL
+    //DIFERENÇA INICIAL E FINAL
     horasSegundosTotais = finalEmSegundos-inicialEmSegundos; //VISTO
 
     //RETORNAR EM HORAS
@@ -73,7 +73,7 @@ int main(){
 
     //SEPARACAO DA HORA E MINUTOS(CONVERSAO DO MINUTOS EM HORAS PARA MINUTOS MUINUTOS
     duracaoHoras = separarHora(retornoEmHoras);           //VISTO
-    duracaoMinutos = separarMinutos_converte(retornoEmHoras); //JÃ ESTA EM MINUTOS //VISTO, SE TRANSFORMAR EM INT NÃƒO CALCULO CERTO
+    duracaoMinutos = separarMinutos_converte(retornoEmHoras); //JÁ ESTA EM MINUTOS //VISTO, SE TRANSFORMAR EM INT NÃO CALCULO CERTO
 
     //FUNCAO DE SAIDA - EVITAR REPETICAO
     saida(duracaoHoras, duracaoMinutos);
@@ -92,3 +92,7 @@ int main(){
   }
   return 0;
 }
+
+
+/*
+*/
