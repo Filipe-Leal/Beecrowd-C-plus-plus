@@ -44,19 +44,34 @@ int main(){
     }
 
   }else if(strcmp(palavra,"invertebrado")==0){
-    puts("invertebrado");
     fgets(palavra, sizeof(palavra), stdin);
     palavra[strcspn(palavra, "\n")]='\0';
 
     if(strcmp(palavra,"inseto")==0){
-      puts("inseto");     //PAREI AQUI
       fgets(palavra,sizeof(palavra),stdin);
       palavra[strcspn(palavra, "\n")]='\0';
+
+
+      if(strcmp(palavra,"hematofago")==0){
+        puts("pulga");
+
+      } else if(strcmp(palavra,"herbivoro")==0){
+        puts("lagarta");
+      }
+
+    }else if(strcmp(palavra,"anelideo")==0){
+      fgets(palavra,sizeof(palavra),stdin);
+      palavra[strcspn(palavra, "\n")]='\0';
+
+      if(strcmp(palavra,"hematofago")==0){
+        puts("sanguessuga");
+
+      }else if(strcmp(palavra,"onivoro")==0){
+        puts("minhoca");
+      }
+
     }
-
   }
-
-
 
   return 0;
 }
